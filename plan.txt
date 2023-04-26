@@ -1,0 +1,3 @@
+objectives
+*create a new to-do item
+*check to-do item
