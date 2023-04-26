@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    font-weight: bold;
+
+}
+button{
+    border :none;
+}
+body{
+    font-family: sans-serif;
+}
+.icon{
+    top: 0px;
+    margin: 0px 0px;
+}
