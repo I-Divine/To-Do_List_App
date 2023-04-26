@@ -2,4 +2,5 @@
 Organizes activities for the day
 
 This app order and organises daily your activites
-runs on JS, CSS and HTML
+
+This app runs on JS, CSS and HTML
