@@ -4,124 +4,38 @@
     <title>to-do list app</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @font-face {
-        font-family: Acquire;
-        src: url(./assets/fonts/Aquire-BW0ox.otf);
-      }
-      @font-face {
-        font-family: Cartesian;
-        src: url(./assets/fonts/Cartesian-0W5Oo.otf);
-      }
-      body {
-        font-family: Cartesian;
-        width: 800px;
-        margin: auto;
-        background-color: rgb(43, 38, 38);
-        /* margin-left: 200px; */
-        color: white;
-      }
-      h1 {
-        font-family: Acquire;
-        text-align: center;
-        font-weight: bold;
-      }
-      input {
-        /* padding: 10x 10px; */
-        border: none;
-        outline: none;
-        border-radius: 1.5px;
-        color: white;
-        width: 400px;
-        padding: 10px 10px;
-        background-color: rgb(104, 100, 100);
-        margin-bottom: 5px;
-      }
-
-      button {
-        /* font-family: Cartesian; */
-        /* margin-left: 10px; */
-        cursor: pointer;
-
-        color: red;
-        background-color: transparent;
-        border: none;
-        border-radius: 1.5px;
-      }
-      /* main{  */
-      /* text-align: center; */
-      /* margin-left: auto; */
-
-      /* } */
-      .task {
-        width: 600px;
-      }
-      .task button {
-        float: right;
-      }
-      #warning {
-        font-size: small;
-        color: rgb(233, 141, 141);
-      }
-      ::placeholder {
-        font-family: Acquire;
-        color: rgb(160, 160, 160);
-        text-align: right;
-        /* margin-left: 20px; */
-      }
-      #container {
-        padding: 20px 40px;
-        background-color: rgba(128, 128, 128, 0.425);
-        border-radius: 10px;
-        width: fit-content;
-        height: fit-content;
-      }
-      /* #container button{
-                font-family: Cartesian;
-                font-size: large;
-            } */
-      #container div {
-        font-size: large;
-        margin-bottom: 10px;
-        background-color: grey;
-        border-radius: 20px;
-        padding: 15px 10px;
-      }
-      label {
-        font-size: x-large;
-      }
-      img {
-        position: relative;
-        top: 20px;
-        width: 40px;
-      }
-      .icon {
-        top: -10px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div>
       <header>
         <h1>To-Do List App</h1>
 
-        <div style="text-align: center">
-          <label> Add Task </label>
-          <input
-            maxlength="40"
-            type="text"
-            id="to-do event"
-            placeholder="what do you wanna do"
-          />
+        <section class="head-container">
+          <div class="input-container" style="flex-grow: 1">
+            <input
+              maxlength="40"
+              type="text"
+              id="to-do event"
+              class="input"
+              placeholder="add task"
+            />
+            <div id="warning" style="visibility: hidden">
+              enter a to-do task
+            </div>
+          </div>
+
           <button type="button" id="btn">
             <img src="./assets/images/plus_1.png" />
           </button>
-          <div id="warning" style="visibility: hidden">enter a to-do task</div>
-        </div>
+        </section>
       </header>
       <main>
         <h2>Tasks</h2>
-        <div id="container" style="visibility: hidden"></div>
+        <div
+          id="container"
+          style="visibility: hidden; max-width: 600px; width: 90%"
+        ></div>
       </main>
     </div>
 
